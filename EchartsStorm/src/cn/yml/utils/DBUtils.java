@@ -1,13 +1,11 @@
-package cn.xdl.utils;
+package cn.yml.utils;
 
 import java.io.InputStream;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
-import java.util.ResourceBundle;
 
 import javax.sql.DataSource;
 

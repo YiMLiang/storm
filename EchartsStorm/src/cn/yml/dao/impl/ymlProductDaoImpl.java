@@ -1,14 +1,15 @@
 package cn.yml.dao.impl;
+
+import cn.yml.dao.ymlProductDao;
+import cn.yml.utils.DBUtils;
+import cn.yml.web.bean.ymlProduct;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-import cn.yml.dao.ymlProductDao;
-import cn.yml.utils.DBUtils;
-import cn.yml.web.bean.ymlProduct;
 
 public class ymlProductDaoImpl implements ymlProductDao {
 
@@ -42,7 +43,7 @@ public class ymlProductDaoImpl implements ymlProductDao {
 			e.printStackTrace();
 		} finally {
 			//关闭连接池
-			DBUtils.close(conn, pst, rs);
+			DBUtils.closeRes(conn,rs,pst);
 		}
 		return null;
 	}

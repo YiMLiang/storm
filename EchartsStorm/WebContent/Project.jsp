@@ -1,4 +1,4 @@
-<%@page import="cn.xdl.web.bean.*"%>
+<%@page import="cn.yml.web.bean.*"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
