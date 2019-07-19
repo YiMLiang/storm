@@ -1,0 +1,139 @@
+package storm.kafka  这个包下面的类都是第三方的插件类库
+
+package com.stone.test 这个包下面的类是我们自己写实现kafka与Storm的整合
+
+一个生产者：
+	SendMessageProducer.java  是生产者负责向Kafka集群基于主题的方式生产数据
+
+
+一个消费者：由Storm的Topology来主导
+
+	CountTopology.java
+		KafkaSpout.java ：由第三方的插件类库实现
+		CountBolt.java
+        KafkaSpoutTestTopology.java
+		KafkaSpout.java : 由第三方的插件类库实现
+		PrinterBolt类
+		
+		
+		
+导入的包包含：
+
+	Storm中的依赖包
+	kafka中的依赖包
+	curator下的所有包
+	
+	
+	
+	若出现以下所示的异常，导入zookeeper-3.4.5.jar 包就可以了，把多余的zookeeper-3.4.*.jar 其他版本的jar包删除掉
+	
+	
+	
+	16366 [Thread-13-words] ERROR backtype.storm.util - Async loop died!
+java.lang.Error: Unresolved compilation problems: 
+	The type org.apache.zookeeper.CreateMode cannot be resolved. It is indirectly referenced from required .class files
+	The import org.apache.zookeeper cannot be resolved
+	The type org.apache.zookeeper.data.Stat cannot be resolved. It is indirectly referenced from required .class files
+	The method forPath(String) from the type Pathable<Stat> refers to the missing type Stat
+	CreateMode cannot be resolved to a variable
+	The method forPath(String, byte[]) from the type PathAndBytesable<Stat> refers to the missing type Stat
+	The method forPath(String) from the type Pathable<Stat> refers to the missing type Stat
+
+	at storm.kafka.ZkState.<init>(ZkState.java:1) ~[bin/:na]
+	at storm.kafka.KafkaSpout.open(KafkaSpout.java:68) ~[bin/:na]
+	at backtype.storm.daemon.executor$fn__3373$fn__3388.invoke(executor.clj:522) ~[storm-core-0.9.3.jar:0.9.3]
+	at backtype.storm.util$async_loop$fn__464.invoke(util.clj:461) ~[storm-core-0.9.3.jar:0.9.3]
+	at clojure.lang.AFn.run(AFn.java:24) [clojure-1.5.1.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
+16388 [Thread-13-words] ERROR backtype.storm.daemon.executor - 
+java.lang.Error: Unresolved compilation problems: 
+	The type org.apache.zookeeper.CreateMode cannot be resolved. It is indirectly referenced from required .class files
+	The import org.apache.zookeeper cannot be resolved
+	The type org.apache.zookeeper.data.Stat cannot be resolved. It is indirectly referenced from required .class files
+	The method forPath(String) from the type Pathable<Stat> refers to the missing type Stat
+	CreateMode cannot be resolved to a variable
+	The method forPath(String, byte[]) from the type PathAndBytesable<Stat> refers to the missing type Stat
+	The method forPath(String) from the type Pathable<Stat> refers to the missing type Stat
+
+	at storm.kafka.ZkState.<init>(ZkState.java:1) ~[bin/:na]
+	at storm.kafka.KafkaSpout.open(KafkaSpout.java:68) ~[bin/:na]
+	at backtype.storm.daemon.executor$fn__3373$fn__3388.invoke(executor.clj:522) ~[storm-core-0.9.3.jar:0.9.3]
+	at backtype.storm.util$async_loop$fn__464.invoke(util.clj:461) ~[storm-core-0.9.3.jar:0.9.3]
+	at clojure.lang.AFn.run(AFn.java:24) [clojure-1.5.1.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
+16391 [Thread-14-words] ERROR backtype.storm.util - Async loop died!
+java.lang.Error: Unresolved compilation problems: 
+	The type org.apache.zookeeper.CreateMode cannot be resolved. It is indirectly referenced from required .class files
+	The import org.apache.zookeeper cannot be resolved
+	The type org.apache.zookeeper.data.Stat cannot be resolved. It is indirectly referenced from required .class files
+	The method forPath(String) from the type Pathable<Stat> refers to the missing type Stat
+	CreateMode cannot be resolved to a variable
+	The method forPath(String, byte[]) from the type PathAndBytesable<Stat> refers to the missing type Stat
+	The method forPath(String) from the type Pathable<Stat> refers to the missing type Stat
+
+	at storm.kafka.ZkState.<init>(ZkState.java:1) ~[bin/:na]
+	at storm.kafka.KafkaSpout.open(KafkaSpout.java:68) ~[bin/:na]
+	at backtype.storm.daemon.executor$fn__3373$fn__3388.invoke(executor.clj:522) ~[storm-core-0.9.3.jar:0.9.3]
+	at backtype.storm.util$async_loop$fn__464.invoke(util.clj:461) ~[storm-core-0.9.3.jar:0.9.3]
+	at clojure.lang.AFn.run(AFn.java:24) [clojure-1.5.1.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
+16391 [Thread-14-words] ERROR backtype.storm.daemon.executor - 
+java.lang.Error: Unresolved compilation problems: 
+	The type org.apache.zookeeper.CreateMode cannot be resolved. It is indirectly referenced from required .class files
+	The import org.apache.zookeeper cannot be resolved
+	The type org.apache.zookeeper.data.Stat cannot be resolved. It is indirectly referenced from required .class files
+	The method forPath(String) from the type Pathable<Stat> refers to the missing type Stat
+	CreateMode cannot be resolved to a variable
+	The method forPath(String, byte[]) from the type PathAndBytesable<Stat> refers to the missing type Stat
+	The method forPath(String) from the type Pathable<Stat> refers to the missing type Stat
+
+	at storm.kafka.ZkState.<init>(ZkState.java:1) ~[bin/:na]
+	at storm.kafka.KafkaSpout.open(KafkaSpout.java:68) ~[bin/:na]
+	at backtype.storm.daemon.executor$fn__3373$fn__3388.invoke(executor.clj:522) ~[storm-core-0.9.3.jar:0.9.3]
+	at backtype.storm.util$async_loop$fn__464.invoke(util.clj:461) ~[storm-core-0.9.3.jar:0.9.3]
+	at clojure.lang.AFn.run(AFn.java:24) [clojure-1.5.1.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
+16403 [Thread-4] INFO  backtype.storm.daemon.executor - Finished loading executor __system:[-1 -1]
+16405 [Thread-16-__system] INFO  backtype.storm.daemon.executor - Preparing bolt __system:(-1)
+16408 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x16437c8c86a000b type:create cxid:0x1f zxid:0x24 txntype:-1 reqpath:n/a Error Path:/storm/errors/kafka-1-1529944269 Error:KeeperErrorCode = NodeExists for /storm/errors/kafka-1-1529944269
+16417 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x16437c8c86a000b type:create cxid:0x20 zxid:0x26 txntype:-1 reqpath:n/a Error Path:/storm/errors/kafka-1-1529944269/words Error:KeeperErrorCode = NodeExists for /storm/errors/kafka-1-1529944269/words
+16422 [Thread-6] INFO  backtype.storm.daemon.executor - Finished loading executor __system:[-1 -1]
+16422 [Thread-6] INFO  backtype.storm.daemon.worker - Launching receive-thread for fc2bacb9-6dbb-4e0e-80d6-f99a1d3b4d1f:1027
+16426 [Thread-18-__system] INFO  backtype.storm.daemon.executor - Preparing bolt __system:(-1)
+16447 [Thread-16-__system] INFO  backtype.storm.daemon.executor - Prepared bolt __system:(-1)
+16460 [Thread-4] INFO  backtype.storm.daemon.executor - Loading executor __acker:[1 1]
+16461 [Thread-4] INFO  backtype.storm.daemon.executor - Loaded executor tasks __acker:[1 1]
+16475 [Thread-18-__system] INFO  backtype.storm.daemon.executor - Prepared bolt __system:(-1)
+16489 [Thread-20-worker-receiver-thread-0] INFO  backtype.storm.messaging.loader - Starting receive-thread: [stormId: kafka-1-1529944269, port: 1027, thread-id: 0 ]
+16502 [Thread-4] INFO  backtype.storm.daemon.executor - Timeouts disabled for executor __acker:[1 1]
+16502 [Thread-4] INFO  backtype.storm.daemon.executor - Finished loading executor __acker:[1 1]
+16502 [Thread-4] INFO  backtype.storm.daemon.worker - Launching receive-thread for d1e22ae5-8a7e-4af3-b54f-8171224ec668:1024
+16503 [Thread-21-__acker] INFO  backtype.storm.daemon.executor - Preparing bolt __acker:(1)
+16504 [Thread-21-__acker] INFO  backtype.storm.daemon.executor - Prepared bolt __acker:(1)
+16508 [Thread-23-worker-receiver-thread-0] INFO  backtype.storm.messaging.loader - Starting receive-thread: [stormId: kafka-1-1529944269, port: 1024, thread-id: 0 ]
+16515 [Thread-13-words] ERROR backtype.storm.util - Halting process: ("Worker died")
+java.lang.RuntimeException: ("Worker died")
+	at backtype.storm.util$exit_process_BANG_.doInvoke(util.clj:325) [storm-core-0.9.3.jar:0.9.3]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.5.1.jar:na]
+	at backtype.storm.daemon.worker$fn__3808$fn__3809.invoke(worker.clj:452) [storm-core-0.9.3.jar:0.9.3]
+	at backtype.storm.daemon.executor$mk_executor_data$fn__3274$fn__3275.invoke(executor.clj:240) [storm-core-0.9.3.jar:0.9.3]
+	at backtype.storm.util$async_loop$fn__464.invoke(util.clj:473) [storm-core-0.9.3.jar:0.9.3]
+	at clojure.lang.AFn.run(AFn.java:24) [clojure-1.5.1.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
+16516 [Thread-14-words] ERROR backtype.storm.util - Halting process: ("Worker died")
+java.lang.RuntimeException: ("Worker died")
+	at backtype.storm.util$exit_process_BANG_.doInvoke(util.clj:325) [storm-core-0.9.3.jar:0.9.3]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.5.1.jar:na]
+	at backtype.storm.daemon.worker$fn__3808$fn__3809.invoke(worker.clj:452) [storm-core-0.9.3.jar:0.9.3]
+	at backtype.storm.daemon.executor$mk_executor_data$fn__3274$fn__3275.invoke(executor.clj:240) [storm-core-0.9.3.jar:0.9.3]
+	at backtype.storm.util$async_loop$fn__464.invoke(util.clj:473) [storm-core-0.9.3.jar:0.9.3]
+	at clojure.lang.AFn.run(AFn.java:24) [clojure-1.5.1.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_71]
+16517 [Thread-4] INFO  backtype.storm.daemon.worker - Worker has topology config {"storm.id" "kafka-1-1529944269", "dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 2000, "storm.messaging.netty.flush.check.interval.ms" 10, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/b9992252-347a-4a70-a1eb-f0843c50516b", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "storm.meta.serialization.delegate" "backtype.storm.serialization.DefaultSerializationDelegate", "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.kryo.decorators" (), "topology.name" "kafka", "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 300, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1024 1025 1026), "topology.environment" nil, "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.kryo.register" nil, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 2, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "topology.multilang.serializer" "backtype.storm.multilang.JsonSerializer", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.worker.receiver.thread.count" 1, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.max.task.parallelism" 2, "storm.messaging.netty.transfer.batch.size" 262144, "topology.classpath" nil}
+16518 [Thread-4] INFO  backtype.storm.daemon.worker - Worker c880a7bd-d6a0-4a64-ae33-9c2132d6520a for storm kafka-1-1529944269 on d1e22ae5-8a7e-4af3-b54f-8171224ec668:1024 has finished loading
+16520 [Thread-6] INFO  backtype.storm.daemon.worker - Worker has topology config {"storm.id" "kafka-1-1529944269", "dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 2000, "storm.messaging.netty.flush.check.interval.ms" 10, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/7134b042-836c-47fe-bc26-99284e371844", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "storm.meta.serialization.delegate" "backtype.storm.serialization.DefaultSerializationDelegate", "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.kryo.decorators" (), "topology.name" "kafka", "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 300, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1027 1028 1029), "topology.environment" nil, "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.kryo.register" nil, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 2, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "topology.multilang.serializer" "backtype.storm.multilang.JsonSerializer", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.worker.receiver.thread.count" 1, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.max.task.parallelism" 2, "storm.messaging.netty.transfer.batch.size" 262144, "topology.classpath" nil}
+16520 [Thread-6] INFO  backtype.storm.daemon.worker - Worker 39c0f184-8dc5-43dd-b63a-498d5b7d1c6b for storm kafka-1-1529944269 on fc2bacb9-6dbb-4e0e-80d6-f99a1d3b4d1f:1027 has finished loading
+
+	
+	
+

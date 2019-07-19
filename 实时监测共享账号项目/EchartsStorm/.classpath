@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="WebContent/WEB-INF/lib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/annotations-api.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/catalina.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/catalina-ant.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/catalina-ha.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/catalina-tribes.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/ecj-4.4.2.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/el-api.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/jasper.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/jasper-el.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/tomcat7-websocket.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/tomcat-i18n-es.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/tomcat-i18n-fr.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/tomcat-i18n-ru.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/tomcat-jdbc.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/tomcat-util.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/apache-tomcat-7.0.91/lib/websocket-api.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/commons-collections-3.2.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/commons-dbcp-1.2.2.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/commons-logging.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/commons-pool.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/ezmorph-1.0.4.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/jstl.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/mysql-connector-java-5.1.8-bin.jar"/>
+	<classpathentry kind="lib" path="/home/xdl/tomcat/standard.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
