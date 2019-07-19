@@ -45,8 +45,6 @@ public class Main extends HttpServlet {
 		ymlProductService productService = new ymlProductService();
 
 		/**
-		 * ajax请求。请求商品信息
-		 * 
 		 * @param request
 		 * @param response
 		 * @throws ServletException
@@ -55,7 +53,7 @@ public class Main extends HttpServlet {
 		// 2. 查询商品信息
 		List<ymlProduct> categories = productService.queryErrorAccount();
 		System.out.println("gets!!" + categories);
-		// 2. 将结果返回给book_list.jsp页面
+		//
 		response.setCharacterEncoding("utf-8");
 		response.getWriter().print(JSONArray.fromObject(categories).toString());
 	}
